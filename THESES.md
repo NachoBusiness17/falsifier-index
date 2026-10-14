@@ -111,7 +111,7 @@ inside the tool that bans it.
 sentence. we are the first to keep it in writing, with the proof that
 nothing moved.
 48. on the night of 2026-10-14 the settlement contract bounced its own owner
-four times, exit code 24976, rather than pay into the band where payments
+five times, exit code 24976, rather than pay into the band where payments
 vanish. he wrote the rule. the rule does not care.
 49. most systems discipline their users. ours disciplines its owner. that is
 the entire difference between a tool and a church.

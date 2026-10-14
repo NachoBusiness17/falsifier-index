@@ -200,11 +200,11 @@ landed. The drain logs are the ledger; a single post-fix settle with
 dry=true kills the sentence.
 
 **48.** LIVE. Kill: produce the contract bytecode and the transaction
-hashes - or produce their absence (his spine, honored). The four bounces
-carry exit code 24976 on the public testnet; the hashes are the nail. This
-is the strongest entry in the index because it is self-implicating: the
-owner wrote the rule and the rule bit him. OWNER ACTION OWED: link the four
-transaction hashes beside this entry.
+hashes - or produce their absence (his spine, honored). LINKED 2026-10-14:
+FIVE bounces carry exit code 24976 on the public testnet (the chain
+corrected the soak receipt's four; one client TIMEOUT was itself a wild
+bounce), hashes and explorer links in evidence/EVIDENCE.md. Self-implicating:
+the owner wrote the rule and the rule bit him, five times.
 
 **49.** LIVE. Kill: a platform that disciplines its owner the way the
 settlement contract disciplined its - four enforced bounces, exit code in
@@ -370,9 +370,10 @@ its own money. The question is answered by the event, in either direction,
 by 2027-02-03 under the fuse of 73.
 
 **87.** LIVE (his spine, honored). Kill: produce the week's receipts - or
-their absence. The rehearsal log, the struck headline in the gate's
-self-test, the four bounce hashes. Three artifacts, one week, all linkable.
-OWNER ACTION OWED: link all three beside this entry.
+their absence. LINKED 2026-10-14: the bounce hashes (evidence/EVIDENCE.md,
+five, exit 24976) and the soak ledger (evidence/soak_cycles.jsonl). Still
+asserted: the struck headline lives inside the gate's self-test at the
+estate repo - link the fixture by the door.
 
 **88.** LIVE. Kill: the settle log for that night - thirty clean, four
 bounced, same window, all on the public chain. A single count off kills
