@@ -37,7 +37,7 @@ Last:
 `c11652729b2b66b19d7a31fc5baa78424f502a8fbf3d03c5c7ecee6ce8504599`
 (lt 102949802000003, taskId 53001188758,
 https://testnet.tonviewer.com/transaction/c11652729b2b66b19d7a31fc5baa78424f502a8fbf3d03c5c7ecee6ce8504599).
-Full taskId list with hashes: `evidence/settles.json`. Pool drawdown across
+The complete machine-readable record - all five bounces, all thirty settles, hashes and explorer links - is `evidence/chain_records.json`, pulled from the public chain 2026-10-14. Pool drawdown across
 the window: 100,000 -> 99,250 GSTD, exactly 25 x 30 (byte-checked against
 the on-chain jetton wallet).
 
