@@ -2,6 +2,8 @@
 
 ## Final grades (sitting 2 + 3: every contract in the repo now read)
 
+sitting 3 complete - all remaining contracts read 2026-10-15 (SovereignVault and EscrowComplete deep-read to final grade; DAOVoting and AgentRegistry re-verified against source, grades stand)
+
 | Contract | Grade | Notes |
 |---|---|---|
 | SettlementMaster (v8) | PASS, coverage 12/12 | probes + soak + band + two-tier; the audited core |
@@ -13,8 +15,8 @@
 | EcosystemTreasury | PASS with note | single-purpose, bounded withdrawal; NOTE: totalWithdrawn increments before the SendIgnoreErrors send settles - a bounced withdrawal leaves accounting drift (one-line fix: increment on a confirmation path) |
 | DAOVoting | PASS (strongest in the set) | 1 TON proposal stake, quorum bounded 5-51%, double-vote guard, votesFor>votesAgainst + quorum require, and an execution TIMELOCK (executionUnlocksAt) - genuinely good governance design |
 | AgentRegistry | PASS at guard level | authority separation (registry-only reputation updates, DAO-only manifest), genesis-violation reporting organ |
-| SovereignVault | PASS-PENDING deep read | standard keeper-vault shape, fee capped 10%, keeper-swapped by design |
-| EscrowComplete | PASS-PENDING deep read | supersedes escrow with nonce replay + TVL + batch (header) |
+| SovereignVault | PASS with notes | keeper-gated JIT payout: `ExecuteSwap.destination` is message input but gated to `nodeKeeper`, the trusted hot-wallet role (by design); NOTES (deep read 2026-10-15): `accumulatedFees` is keeper-self-reported (`feeReserved`) and `managementFee`, the field the 10% cap guards, is never used in any computation, so the cap is decorative; `WithdrawLiquidity` + `HarvestFees` decrement accounting before `SendIgnoreErrors`/`bounce:false` sends, a bounce leaves drift (same class as the EcosystemTreasury note); single hot-key compromise can route the whole pool - accepted custodial shape, no user-reachable unvalidated value path |
+| EscrowComplete | PASS with notes | replay protection is real: strictly-increasing global nonce checked and set before any send; `Withdraw` owner-gated with min message value, `myBalance() - 0.1 TON` reserve check and TVL check; NOTES (deep read 2026-10-15): TVL decrements before the sends and both legs are `SendIgnoreErrors` (executor leg `bounce:true`), so a bounced fee/reward leg leaves tracking drift while funds stay in-contract and recoverable via owner `EmergencyWithdraw`; header promises batch payouts, the code has none (doc mismatch); owner retains unilateral `EmergencyWithdraw` to any destination - platform-custodial by design, no user-reachable unvalidated value path |
 
 ## Build set after exclusions (8 live, all audited at grade)
 
