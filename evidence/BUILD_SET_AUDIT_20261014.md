@@ -10,7 +10,7 @@ sitting 3 complete - all remaining contracts read 2026-10-15 (SovereignVault and
 | GstdBridgeRouter | **FAIL - EXCLUDED** | 3 criticals (WORMHOLE_RED_VERDICT.md); source preserved |
 | SettlementRouter | **FAIL - EXCLUDED** | RoutePayment accepts user TON with the swap as a placeholder comment - forwards value-0.05 to any user-named destination via SendIgnoreErrors; SwapResult trusts DEX addresses initialized to owner ("to be updated") |
 | escrow.tact | **EXCLUDED** | DEPRECATED by its own header (superseded by escrow_complete); reference only |
-| GSTDJetton | PASS with notes | 4 mint guard layers + bounce-restore + 400M worker-pool cap; mainnet checklist: SetMintAuthority -> Settlement + FreezeMint |
+| GSTDJetton | PASS with notes | 4 mint guard layers + bounce-restore + 400M worker-pool cap (GSTDJetton.tact, workerPoolMax at init); mainnet checklist: SetMintAuthority -> Settlement + FreezeMint |
 | TreasuryGold | PASS with notes | owner-gated, ratio bounded 50-95%, withdrawal keeps 1 TON reserve |
 | EcosystemTreasury | PASS with note | single-purpose, bounded withdrawal; NOTE: totalWithdrawn increments before the SendIgnoreErrors send settles - a bounced withdrawal leaves accounting drift (one-line fix: increment on a confirmation path) |
 | DAOVoting | PASS (strongest in the set) | 1 TON proposal stake, quorum bounded 5-51%, double-vote guard, votesFor>votesAgainst + quorum require, and an execution TIMELOCK (executionUnlocksAt) - genuinely good governance design |
